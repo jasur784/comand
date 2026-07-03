@@ -14,17 +14,16 @@ dp = Dispatcher()
 Keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text="Payment"),KeyboardButton(text='Axmet')
+            KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir")
         ]
     ],
     resize_keyboard=True,
     )
-
-
-
-
-
-
+@dp.message()
+async def hh(message:Message):
+    amirr = message.text
+    if amirr=='Amir':
+        await message.answer('Amir Amanbekov')
 
 @dp.message(CommandStart())
 async def start(message: Message):
