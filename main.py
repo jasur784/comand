@@ -16,6 +16,9 @@ Keyboard = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir"),
             KeyboardButton(text="Samandar"),KeyboardButton(text="Amir2"),KeyboardButton(text="Amir3"),KeyboardButton(text="Amir4"),KeyboardButton(text="Amir5"),
+
+            KeyboardButton(text="Samandar"),KeyboardButton(text='Axmet_1'),KeyboardButton(text='Axmet_2'),
+            KeyboardButton(text='Axmet_3'),KeyboardButton(text='Axmet_4'),KeyboardButton(text='Axmet_5')
         ]
     ],
     resize_keyboard=True,
@@ -25,6 +28,7 @@ async def hh(message:Message):
     amirr = message.text
     if amirr=='Amir':
         await message.answer('Amir Amanbekov')
+
 
 @dp.message()
 async def a2(message:Message):
@@ -48,6 +52,38 @@ async def a5(message:Message):
     amirr = message.text
     if amirr=='Amir5':
         await message.answer('Amir Amanbekov')
+
+
+@dp.message(Command(commands=["profile"]))
+async def profile(message: Message):
+    await message.answer(
+        "muxa1",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["settings"]))
+async def settings(message: Message):
+    await message.answer(
+        "muxa2",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["help"]))
+async def help(message: Message):
+    await message.answer(
+        "muxa3",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["about"]))
+async def about(message: Message):
+    await message.answer(
+        "muxa4",
+        reply_markup=Keyboard
+    )      
+@dp.message(Command(commands=["click"]))
+async def click(message: Message):
+    await message.answer(
+        "muxa5",
+        reply_markup=Keyboard
+    )
 
 @dp.message(F.text == "📚 Kitaplar")
 async def books(message: Message):
@@ -73,8 +109,17 @@ async def menu(message:Message):
     if text=='Axmet':
         await message.answer('Axmet Muratbaev')
     elif text == "Samandar":
-        await message.answer("Qdirbaev Samandar")    
- 
+        await message.answer("Qdirbaev Samandar")   
+    elif text == 'Axmet_1':
+        await message.answer('Axmet Muratbaev_1')
+    elif text == 'Axmet_2':
+        await message.answer('Axmet Muratbaev_2')  
+    elif text== 'Axmet_3':
+        await message.answer('Axmet Muratbaev_3')
+    elif text == 'Axmet_4':
+        await message.answer('Axmet Muratbaev_4')
+    elif text == 'Axmet_5':
+        await message.answer('Axmet Muratbaev_5')   
 
 async def main():
     await dp.start_polling(bot)
