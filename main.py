@@ -15,7 +15,7 @@ Keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir"),
-            KeyboardButton(text="Samandar")
+            KeyboardButton(text="Samandar"),KeyboardButton(text="Amir2"),KeyboardButton(text="Amir3"),KeyboardButton(text="Amir4"),KeyboardButton(text="Amir5"),
         ]
     ],
     resize_keyboard=True,
@@ -24,6 +24,29 @@ Keyboard = ReplyKeyboardMarkup(
 async def hh(message:Message):
     amirr = message.text
     if amirr=='Amir':
+        await message.answer('Amir Amanbekov')
+
+@dp.message()
+async def a2(message:Message):
+    amirr = message.text
+    if amirr=='Amir2':
+        await message.answer('Amir Amanbekov')
+@dp.message()
+async def a3(message:Message):
+    amirr = message.text
+    if amirr=='Amir3':
+        await message.answer('Amir Amanbekov')
+
+@dp.message()
+async def a4(message:Message):
+    amirr = message.text
+    if amirr=='Amir4':
+        await message.answer('Amir Amanbekov')
+
+@dp.message()
+async def a5(message:Message):
+    amirr = message.text
+    if amirr=='Amir5':
         await message.answer('Amir Amanbekov')
 
 @dp.message(F.text == "📚 Kitaplar")
