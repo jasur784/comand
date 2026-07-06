@@ -19,9 +19,26 @@ Keyboard = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+
+menyu=ReplyKeyboardMarkup(
+    keyboard=[
+            [KeyboardButton=(text='Katalog'),KeyboardButton(text='Sebet'),
+            [KeyboardButton=(text='Baylanis')],
+    ],
+    resize_keyboard=True
+)
+
+
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer('Hello')
+
+
+
+@dp.message(Command('sawda'))
+async def sawda(message:Message):
+    await message.answer('xush kelibsiz',reply_markup=menyu)
 
 @dp.message(Command(commands=["payment"]))
 async def payment(message: Message):
