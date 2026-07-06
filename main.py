@@ -27,6 +27,18 @@ async def hh(message:Message):
     if amirr=='Amir':
         await message.answer('Amir Amanbekov')
 
+@dp.message(F.text == "📚 Kitaplar")
+async def books(message: Message):
+    await message.answer("Kitaplar bo'limi.")
+
+@dp.message(F.text == "📝 Bánt etiw")
+async def borrow(message: Message):
+    await message.answer("Bánt etiw bo'limi.")
+
+@dp.message(F.text == "⏰ Qaytarıw múddeti")
+async def return_date(message: Message):
+    await message.answer("Qaytarıw múddeti bo'limi.")
+
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer('Hello')
