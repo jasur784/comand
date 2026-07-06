@@ -15,7 +15,8 @@ Keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir"),
-            KeyboardButton(text="Samandar")
+            KeyboardButton(text="Samandar"),KeyboardButton(text='Axmet_1'),KeyboardButton(text='Axmet_2'),
+            KeyboardButton(text='Axmet_3'),KeyboardButton(text='Axmet_4'),KeyboardButton(text='Axmet_5')
         ]
     ],
     resize_keyboard=True,
@@ -38,8 +39,17 @@ async def menu(message:Message):
     if text=='Axmet':
         await message.answer('Axmet Muratbaev')
     elif text == "Samandar":
-        await message.answer("Qdirbaev Samandar")    
-
+        await message.answer("Qdirbaev Samandar")   
+    elif text == 'Axmet_1':
+        await message.answer('Axmet Muratbaev_1')
+    elif text == 'Axmet_2':
+        await message.answer('Axmet Muratbaev_2')  
+    elif text== 'Axmet_3':
+        await message.answer('Axmet Muratbaev_3')
+    elif text == 'Axmet_4':
+        await message.answer('Axmet Muratbaev_4')
+    elif text == 'Axmet_5':
+        await message.answer('Axmet Muratbaev_5')   
 
 async def main():
     await dp.start_polling(bot)
