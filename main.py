@@ -26,7 +26,36 @@ async def hh(message:Message):
     amirr = message.text
     if amirr=='Amir':
         await message.answer('Amir Amanbekov')
-
+@dp.message(Command(commands=["profile"]))
+async def profile(message: Message):
+    await message.answer(
+        "muxa1",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["settings"]))
+async def settings(message: Message):
+    await message.answer(
+        "muxa2",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["help"]))
+async def help(message: Message):
+    await message.answer(
+        "muxa3",
+        reply_markup=Keyboard
+    )
+@dp.message(Command(commands=["about"]))
+async def about(message: Message):
+    await message.answer(
+        "muxa4",
+        reply_markup=Keyboard
+    )      
+@dp.message(Command(commands=["click"]))
+async def click(message: Message):
+    await message.answer(
+        "muxa5",
+        reply_markup=Keyboard
+    )
 @dp.message(F.text == "📚 Kitaplar")
 async def books(message: Message):
     await message.answer("Kitaplar bo'limi.")
