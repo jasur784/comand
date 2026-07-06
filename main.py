@@ -14,7 +14,8 @@ dp = Dispatcher()
 Keyboard = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir")
+            KeyboardButton(text="Payment"),KeyboardButton(text='Axmet'),KeyboardButton(text="Amir"),
+            KeyboardButton(text="Samandar")
         ]
     ],
     resize_keyboard=True,
@@ -36,6 +37,8 @@ async def menu(message:Message):
     text = message.text
     if text=='Axmet':
         await message.answer('Axmet Muratbaev')
+    elif text == "Samandar":
+        await message.answer("Qdirbaev Samandar")    
 
 
 async def main():
