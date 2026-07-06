@@ -18,16 +18,40 @@ Keyboard = ReplyKeyboardMarkup(
         ]
     ],
     resize_keyboard=True
+<<<<<<< HEAD
     )
+=======
+)
+
+
+menyu=ReplyKeyboardMarkup(
+    keyboard=[
+            [KeyboardButton=(text='Katalog'),KeyboardButton(text='Sebet'),
+            [KeyboardButton=(text='Baylanis')],
+    ],
+    resize_keyboard=True
+)
+
+
+>>>>>>> eebe43eed55b5a6ae3ef238a361a426bcbee8290
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer('Hello')
 
+<<<<<<< HEAD
 @dp.message(Command('ofis'))
 async def channels(message:Message):
     await message.answer(f"Qaraqalpaqstan koshe")
 
 
+=======
+
+
+@dp.message(Command('sawda'))
+async def sawda(message:Message):
+    await message.answer('xush kelibsiz',reply_markup=menyu)
+
+>>>>>>> eebe43eed55b5a6ae3ef238a361a426bcbee8290
 @dp.message(Command(commands=["payment"]))
 async def payment(message: Message):
     await message.answer('Payment command received!')
